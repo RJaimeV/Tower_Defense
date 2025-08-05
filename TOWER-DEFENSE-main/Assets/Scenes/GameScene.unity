@@ -759,7 +759,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 378032154}
-  - {fileID: 1682161069}
   - {fileID: 1844284566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -870,7 +869,7 @@ MonoBehaviour:
           m_StringArgument: UIScreenLooseAppear
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1682161071}
+      - m_Target: {fileID: 378032155}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
@@ -1603,7 +1602,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CoinCollected
+          m_StringArgument: Coin
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 33426337}
@@ -1785,7 +1784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnInterval: 5
-  _spawnRadius: 0.15
+  _spawnRadius: 1
   _positionY: 0
   _InstantiateZombie:
     m_PersistentCalls:
@@ -1823,7 +1822,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Attack_creature
+          m_StringArgument: Zombie
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &935003032
@@ -1898,7 +1897,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CoinCash
+          m_StringArgument: RecolectCoin
           m_BoolArgument: 0
         m_CallState: 2
   _onPurchaseFailure:
@@ -1913,7 +1912,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: errorSound
+          m_StringArgument: error
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1015687846
@@ -1945,7 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15c0ed81c5eea4f9541a7ea70e8b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 0.2
+  _radius: 0.25
   _spawnRate: 2
   _positionY: 0
   _instantiateCoin:
@@ -2426,7 +2425,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 4ba9f2c5503f986478edd31cc6d9899f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1485164129}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 4ba9f2c5503f986478edd31cc6d9899f, type: 3}
       insertIndex: -1
@@ -2889,15 +2891,15 @@ RectTransform:
   m_GameObject: {fileID: 1485164128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.112500004, y: 0.112500004, z: 0.112500004}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 424897459}
-  m_Father: {fileID: 1682161069}
+  m_Father: {fileID: 378032154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 7.4075003}
+  m_AnchoredPosition: {x: 0, y: 16.666876}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485164130
@@ -3028,7 +3030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 7308278893932628959, guid: 10f98dfed3e5f7c458fd5757658f7058, type: 3}
+  _prefab: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
   _parent: {fileID: 339262711}
 --- !u!4 &1588480352
 Transform:
@@ -3124,309 +3126,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629008528}
   m_CullTransparentMesh: 1
---- !u!1001 &1682161068
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 339262711}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_Name
-      value: Tower_Yax
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1485164129}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1682161073}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1682161072}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1682161071}
-  m_SourcePrefab: {fileID: 100100000, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
---- !u!4 &1682161069 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-  m_PrefabInstance: {fileID: 1682161068}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1682161070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b549b41faf9d4eb49ac8279b14d6ff33, type: 3}
-  m_PrefabInstance: {fileID: 1682161068}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1682161071
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682161070}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b238deb894342484abe9826192fc7c3e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1682161072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682161070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a489c38a3baa04282c38c5335dadd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthSlider: {fileID: 424897460}
-  _maxHealth: 100
-  _onTakeDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1415754766}
-        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
-        m_MethodName: InstantiateObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 339262711}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1967017382}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HitTower
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 587808976}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: UIScreenLooseAppear
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1682161071}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerHiden
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 846339702}
-        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
-        m_MethodName: InstantiateObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 846339703}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerHiden
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 923374540}
-        m_TargetAssemblyTypeName: EnemySpawn, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerHiden
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1308792683}
-        m_TargetAssemblyTypeName: EnemySpawn, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerHiden
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1682161073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682161070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93844a6e6a79494f8d4fa6b7f02f487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onInitialized:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1242897209}
-        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
-        m_MethodName: InstantiateObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1682161069}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1682161071}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerAppear
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1682161072}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: InitializeHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerAppear
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1967017382}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MagicAppear
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onHidden:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1682161071}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TowerHiden
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1693983220
 GameObject:
   m_ObjectHideFlags: 0

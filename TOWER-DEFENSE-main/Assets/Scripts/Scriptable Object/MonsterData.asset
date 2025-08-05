@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: MonsterData
   m_EditorClassIdentifier: 
   attackRange: 0.1
-  AttackDamage: 4
+  AttackDamage: 2
   runSpeed: 0.05
   attackDuration: 1
   attackCooldown: 1
   attackSoundName: ZombieAttack
   PrimaryTargetTag: Tower
-  runAnimationName: zombieRun
-  attackAnimationName: WarrockAttack
-  dieAnimationName: WarrockDead
-  winAnimationName: WarrockVictory
+  runAnimationName: 
+  attackAnimationName: Zombie@Attack01
+  dieAnimationName: Zombie@Death01_A
+  winAnimationName: Zombie@Damage01
   dieSoundName: EnemyDie
