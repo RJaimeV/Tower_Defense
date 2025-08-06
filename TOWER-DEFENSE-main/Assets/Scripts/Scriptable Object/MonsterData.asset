@@ -22,5 +22,5 @@ MonoBehaviour:
   runAnimationName: 
   attackAnimationName: Zombie@Attack01
   dieAnimationName: Zombie@Death01_A
-  winAnimationName: Zombie@Damage01
-  dieSoundName: EnemyDie
+  winAnimationName: Zombie@Idle01_Action01
+  dieSoundName: 1

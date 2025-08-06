@@ -69,6 +69,7 @@ public class Enemy : MonoBehaviour
         StopAllCoroutines();
         _isRunning = false;
         StartCoroutine(DieCoroutine());
+        gameObject.SetActive(false);
     }
 
     private IEnumerator DieCoroutine()
@@ -76,7 +77,7 @@ public class Enemy : MonoBehaviour
         SoundManager.instance.Play(_enemyData.dieSoundName);
         _animator.Play(_enemyData.dieAnimationName);
         yield return new WaitForSeconds(2f);
-        gameObject.SetActive(false);
+       
     }
     private void ODisable()
     {

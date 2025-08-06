@@ -337,6 +337,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214057077}
   m_CullTransparentMesh: 1
+--- !u!1 &245587116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245587118}
+  - component: {fileID: 245587119}
+  m_Layer: 0
+  m_Name: InstantiateSkeleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245587118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245587116}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.157, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245587119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245587116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 8858051749441068820, guid: 4c67ed6c086451b4db54ac4d24b626bb, type: 3}
+  _parent: {fileID: 339262711}
 --- !u!1 &249162201
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +665,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1308792683}
+        m_TargetAssemblyTypeName: EnemySpawn, Assembly-CSharp
+        m_MethodName: Initialize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
@@ -694,7 +752,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1308792683}
+        m_TargetAssemblyTypeName: EnemySpawn, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1588480351}
+        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
+        m_MethodName: DesactivateAllObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1821787837}
+        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
+        m_MethodName: DesactivateAllObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 538425541}
         m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
         m_MethodName: DesactivateAllObjects
         m_Mode: 1
@@ -1722,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 1944206404642467004, guid: f9d2e43a1307c8c4d8ae6dcf6feb64b6, type: 3}
+  _prefab: {fileID: 830533200673021296, guid: 7380d31585eb7074ca5d572ef7d6473a, type: 3}
   _parent: {fileID: 339262711}
 --- !u!4 &846339703
 Transform:
@@ -1783,25 +1877,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db65dc3679744249a9b16a6463201f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnInterval: 5
+  _spawnInterval: 3
   _spawnRadius: 1
   _positionY: 0
   _InstantiateZombie:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1588480351}
-        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
-        m_MethodName: InstatiateObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 48211673}
         m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
         m_MethodName: InstatiateObject
         m_Mode: 0
@@ -2021,52 +2103,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 380.75754, y: 240.11667, z: 20.10629}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1109329737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1109329739}
-  - component: {fileID: 1109329738}
-  m_Layer: 0
-  m_Name: InstantiateMonster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1109329738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109329737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 7308278893932628959, guid: 10f98dfed3e5f7c458fd5757658f7058, type: 3}
-  _parent: {fileID: 339262711}
---- !u!4 &1109329739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109329737}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2552,24 +2588,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnInterval: 10
-  _spawnRadius: 0.8
+  _spawnRadius: 1
   _positionY: 0
   _InstantiateZombie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1109329738}
-        m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
-        m_MethodName: InstatiateObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 48211673}
+      - m_Target: {fileID: 245587119}
         m_TargetAssemblyTypeName: InstantiatePoolObject, Assembly-CSharp
         m_MethodName: InstatiateObject
         m_Mode: 0
@@ -2590,7 +2614,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Attack_creature
+          m_StringArgument: bones
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &1308792684
@@ -2602,7 +2626,7 @@ Transform:
   m_GameObject: {fileID: 1308792682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.273, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2747,7 +2771,7 @@ GameObject:
   - component: {fileID: 1415754767}
   - component: {fileID: 1415754766}
   m_Layer: 0
-  m_Name: InstatntiateHitTower
+  m_Name: InstantiateHitTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4224,7 +4248,7 @@ SceneRoots:
   - {fileID: 48211674}
   - {fileID: 1415754767}
   - {fileID: 1588480352}
-  - {fileID: 1109329739}
+  - {fileID: 245587118}
   - {fileID: 1821787838}
   - {fileID: 538425542}
   - {fileID: 1091651698}
