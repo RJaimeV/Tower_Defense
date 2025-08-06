@@ -167,7 +167,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _gunData: {fileID: 11400000, guid: ea3b32d54ff8dfe40bb4e51660dc995f, type: 2}
+  _gunData: {fileID: 11400000, guid: 68f9e9b2640d3f24db8e776f6a89fee4, type: 2}
   _targetTag: Zombie
 --- !u!135 &6068163374764174874
 SphereCollider:
