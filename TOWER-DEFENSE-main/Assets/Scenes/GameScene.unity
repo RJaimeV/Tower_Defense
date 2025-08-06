@@ -328,7 +328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TurretGun
+  m_Text: SuperTurret
 --- !u!222 &214057080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 550258929992617858, guid: f9952a6ba3254ab4994a066282dd46c1, type: 3}
+  _prefab: {fileID: 453211350798910489, guid: a7181ac09c6c69c4fa2710cfd8d06406, type: 3}
   _parent: {fileID: 339262711}
 --- !u!4 &538425542
 Transform:
@@ -1641,7 +1641,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TurretGun
+  m_Text: Turret
 --- !u!222 &811791729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3336,7 +3336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be6420f522eb4f4a919b05b16e3df74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 550258929992617858, guid: 8541d2d9479a145448b77994464fff46, type: 3}
+  _prefab: {fileID: 5767670779677980122, guid: bcbee71261dc8464c929f4648f66a337, type: 3}
   _parent: {fileID: 339262711}
 --- !u!4 &1821787838
 Transform:
@@ -3459,7 +3459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6117a5f44855a5f47bfbf6bcf239a1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gunCost: 1
+  _gunCost: 2
   _gunPoolObject: {fileID: 1821787837}
   _coinsNumber: {fileID: 935003034}
   _onGunPurchased:
@@ -3800,7 +3800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6117a5f44855a5f47bfbf6bcf239a1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gunCost: 1
+  _gunCost: 5
   _gunPoolObject: {fileID: 538425541}
   _coinsNumber: {fileID: 935003034}
   _onGunPurchased:
